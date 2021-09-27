@@ -1,0 +1,56 @@
+Benchmarking InsertionSort for random array elements:
+2021-09-26 15:03:39 INFO  Benchmark_Timer - Begin run: Insertion sort for 1000 Integers with 100 runs
+3.42ms
+2021-09-26 15:03:40 INFO  Benchmark_Timer - Begin run: Insertion sort for 2000 Integers with 100 runs
+11.09ms
+2021-09-26 15:03:41 INFO  Benchmark_Timer - Begin run: Insertion sort for 4000 Integers with 100 runs
+35.0ms
+2021-09-26 15:03:45 INFO  Benchmark_Timer - Begin run: Insertion sort for 8000 Integers with 100 runs
+144.83ms
+2021-09-26 15:04:01 INFO  Benchmark_Timer - Begin run: Insertion sort for 16000 Integers with 100 runs
+620.1ms
+Benchmarking InsertionSort for sorted array elements:
+2021-09-26 15:05:09 INFO  Benchmark_Timer - Begin run: Insertion sort for 1000 Integers with 100 runs
+0.01ms
+2021-09-26 15:05:09 INFO  Benchmark_Timer - Begin run: Insertion sort for 2000 Integers with 100 runs
+0.03ms
+2021-09-26 15:05:09 INFO  Benchmark_Timer - Begin run: Insertion sort for 4000 Integers with 100 runs
+0.05ms
+2021-09-26 15:05:09 INFO  Benchmark_Timer - Begin run: Insertion sort for 8000 Integers with 100 runs
+0.06ms
+2021-09-26 15:05:09 INFO  Benchmark_Timer - Begin run: Insertion sort for 16000 Integers with 100 runs
+0.12ms
+Benchmarking InsertionSort for reverse sorted array elements:
+2021-09-26 15:05:09 INFO  Benchmark_Timer - Begin run: Insertion sort for 1000 Integers with 100 runs
+4.87ms
+2021-09-26 15:05:10 INFO  Benchmark_Timer - Begin run: Insertion sort for 2000 Integers with 100 runs
+15.78ms
+2021-09-26 15:05:12 INFO  Benchmark_Timer - Begin run: Insertion sort for 4000 Integers with 100 runs
+77.08ms
+2021-09-26 15:05:20 INFO  Benchmark_Timer - Begin run: Insertion sort for 8000 Integers with 100 runs
+288.6ms
+2021-09-26 15:05:51 INFO  Benchmark_Timer - Begin run: Insertion sort for 16000 Integers with 100 runs
+1191.82ms
+Benchmarking InsertionSort for partially sorted array elements:
+2021-09-26 15:08:03 INFO  Benchmark_Timer - Begin run: Insertion sort for 1000 Integers with 100 runs
+4.95ms
+2021-09-26 15:08:04 INFO  Benchmark_Timer - Begin run: Insertion sort for 2000 Integers with 100 runs
+18.91ms
+2021-09-26 15:08:06 INFO  Benchmark_Timer - Begin run: Insertion sort for 4000 Integers with 100 runs
+77.11ms
+2021-09-26 15:08:14 INFO  Benchmark_Timer - Begin run: Insertion sort for 8000 Integers with 100 runs
+305.65ms
+2021-09-26 15:08:48 INFO  Benchmark_Timer - Begin run: Insertion sort for 16000 Integers with 100 runs
+1213.78ms
+Benchmarking InsertionSort for partially sorted array elements:
+2021-09-26 15:11:01 INFO  Benchmark_Timer - Begin run: Insertion sort for 1000 Integers with 100 runs
+3.29ms
+2021-09-26 15:11:01 INFO  Benchmark_Timer - Begin run: Insertion sort for 2000 Integers with 100 runs
+20.65ms
+2021-09-26 15:11:03 INFO  Benchmark_Timer - Begin run: Insertion sort for 4000 Integers with 100 runs
+62.42ms
+2021-09-26 15:11:11 INFO  Benchmark_Timer - Begin run: Insertion sort for 8000 Integers with 100 runs
+296.56ms
+2021-09-26 15:11:43 INFO  Benchmark_Timer - Begin run: Insertion sort for 16000 Integers with 100 runs
+1180.41ms
+
