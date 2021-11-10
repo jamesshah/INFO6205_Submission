@@ -18,31 +18,31 @@ public class Main {
 
     public static void main(String[] args) {
         processArgs(args);
-        int[] threads = {2, 4, 8, 16, 32};
-        int[] arraySize = {1000000, 2000000, 4000000, 8000000, 16000000};
-        for (int size: arraySize) {
-            for (int th : threads) {
-                //            ParSort.myPool = new ForkJoinPool(configuration.getOrDefault("-n", 3));
-                ParSort.myPool = new ForkJoinPool(th);
+        // int[] threads = {2, 4, 8, 16, 32};
+        // int[] arraySize = {1000000, 2000000, 4000000, 8000000, 16000000};
+        // for (int size: arraySize) {
+            // for (int th : threads) {
+                ParSort.myPool = new ForkJoinPool(configuration.getOrDefault("-n", 3));
+                // ParSort.myPool = new ForkJoinPool(th);
                 Random random = new Random();
-                int[] array = new int[size];
+                int[] array = new int[1000000];
                 System.out.println("Degree of parallelism: " + ParSort.myPool.getParallelism());
                 System.out.println("Size of the array: " + array.length);
                 ArrayList<Long> timeList = new ArrayList<>();
-//                for (int j = 100; j < 200; j++) {
-                ParSort.cutoff = 3*(size / 4);
-                // for (int i = 0; i < array.length; i++) array[i] = random.nextInt(10000000);
-                long time;
-                long startTime = System.currentTimeMillis();
-                for (int t = 0; t < 10; t++) {
-                    for (int i = 0; i < array.length; i++) array[i] = random.nextInt(10000000);
-                    ParSort.sort(array, 0, array.length);
-                }
-                long endTime = System.currentTimeMillis();
-                time = (endTime - startTime);
-                timeList.add(time);
-                System.out.println("cutoff：" + (ParSort.cutoff) + "\t\t10times Time:" + time + "ms");
-//                }
+                for (int j = 50; j < 100; j++) {
+                    ParSort.cutoff = 1000 * (j + 1);
+                    // for (int i = 0; i < array.length; i++) array[i] = random.nextInt(10000000);
+                    long time;
+                    long startTime = System.currentTimeMillis();
+                    for (int t = 0; t < 10; t++) {
+                        for (int i = 0; i < array.length; i++) array[i] = random.nextInt(10000000);
+                        ParSort.sort(array, 0, array.length);
+                    }
+                    long endTime = System.currentTimeMillis();
+                    time = (endTime - startTime);
+                    timeList.add(time);
+                    System.out.println("cutoff：" + (ParSort.cutoff) + "\t\t10times Time:" + time + "ms");
+               }
                 try {
                     FileOutputStream fis = new FileOutputStream("./src/result.csv");
                     OutputStreamWriter isr = new OutputStreamWriter(fis);
@@ -58,10 +58,7 @@ public class Main {
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
-            }
-        }
-    }
-
+            }        
     private static void processArgs(String[] args) {
         String[] xs = args;
         while (xs.length > 0)
